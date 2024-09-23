@@ -9,6 +9,10 @@
 // TODO: write code below
 
 // 2. Define a function that capitalises any string
+/**
+ * @param {string} s
+ * @returns {string}
+ */
 
 // Example Input and Output:
 //
@@ -55,9 +59,12 @@
 
 // TODO: change each undefined below to be the name of the functions you defined
 module.exports = {
-  a: undefined, // 1. change undefined to be the name of the function you defined for the first TODO
-  b: undefined, // 2. change undefined to be the name of the function you defined for the second TODO)
-  c: undefined, // etc
-  d: undefined,
-  e: undefined
+  a: (i) => i + 1,
+  b: (s) => s.charAt(0).toUpperCase() + s.slice(1),
+  c: (name) => 'Hi, ' + capitalize(name) + ' :)',
+  d: (arr) => arr.filter((x) => typeof x === 'string').length,
+  e: (obj) => {
+    if (!obj.hasOwnProperty('edward')) obj.edward = 'amazing'
+    return obj
+  }
 }
