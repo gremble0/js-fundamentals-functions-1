@@ -13,6 +13,9 @@
  * @param {string} s
  * @returns {string}
  */
+function capitalize(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
 
 // Example Input and Output:
 //
@@ -60,7 +63,7 @@
 // TODO: change each undefined below to be the name of the functions you defined
 module.exports = {
   a: (i) => i + 1,
-  b: (s) => s.charAt(0).toUpperCase() + s.slice(1),
+  b: capitalize,
   c: (name) => 'Hi, ' + capitalize(name) + ' :)',
   d: (arr) => arr.filter((x) => typeof x === 'string').length,
   e: (obj) => {
