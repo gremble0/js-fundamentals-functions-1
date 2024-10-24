@@ -9,6 +9,13 @@
 // -1, 1        | [-1, 0, 1]
 //
 // TODO: write code below
+function rangeOfNumbers(lower, upper) {
+  const range = []
+  for (let i = lower; i <= upper; i++) {
+    range.push(i)
+  }
+  return range
+}
 
 // 2. define a function that takes two arguments: a string and a number.
 // The function should return the same string but in upper case with exclamation
@@ -22,6 +29,10 @@
 //
 // TODO: write code below
 
+function stringWithExclamations(string, number) {
+  return string.toUpperCase() + '!'.repeat(number)
+}
+
 // 3. define a function that takes two arguments: a string and a number.
 // The function should return the new time in 24hr time after adding the additional time in minutes.
 //
@@ -33,6 +44,14 @@
 // '12:50', 120 | '14:50'
 // '23:50', 30  | '00:20'
 // TODO: write code below
+function addMinutesToTime(time, minutes) {
+  const [hours, minutes] = time.split(':').map(Number)
+  const newMinutes = (minutes + minutes) % 60
+  const newHours = (hours + Math.floor((minutes + minutes) / 60)) % 24
+  return `${newHours.toString().padStart(2, '0')}:${newMinutes
+    .toString()
+    .padStart(2, '0')}`
+}
 
 // TODO: change the exported value to be the name of the function you defined
 module.exports = {
